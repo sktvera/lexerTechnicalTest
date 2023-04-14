@@ -12,21 +12,15 @@ const HomeLexer =()=>{
          <div className='itemTittle'>
          <h2>Sus Empleados En Un Click</h2>
          </div>
-  <div className='itemTittle'>
-      <p>el nuevo software administrativo de lexer le permitira.</p>
-  </div>
-  
-  
-  <div  className="contained-buttonWelcome">
-  <NavLink className="navlinks" to="/Employees">
-        <Button   className="buttonWelcome"  variant="contained">Iniciar</Button>
-        </NavLink>
+          <div className='itemTittle'>
+              <p>el nuevo software administrativo de lexer le permitira Manejar a Sus Empleados.</p>
+          </div>
+        <div  className="contained-buttonWelcome">
+          <NavLink className="navlinks" to="/Employees">
+              <Button   className="buttonWelcome"  variant="contained">Iniciar</Button>
+          </NavLink>
         </div>
           </CardContent>
-        
-      
-
-
       </div>
     </div>
   );

@@ -18,7 +18,12 @@ además de tener las indicaciones pertinentes de uso.
 
 # Solucion 
 
-1.primero se establecio el servidor con express, porteior a esto implementamos la estructura Mvc, conectando asi nuestro Entry Point"index.js" con las "routes/tasks.routes.js"
+la el script de la sabe de datos se encuentra en la carpeta codeSQL.sql
+ 
+npm run dev
+
+1.backend, primero se establecio el servidor con express, porteior a esto implementamos la estructura Mvc, conectando asi nuestro Entry Point"index.js" con las "routes/tasks.routes.js"
 se establecen las diferentes rutas con la conexion al controlador y los diferentes metodos, en el controlador desarrollamos la logica del api y sus metodos de peticion http "CRUD" con sentencias "SQL", toda la informacion que consume nuestra api es extraida del archivo "db" alojada en la constante "const pool = require("../db");" en el archivo db se definen las credenciales las cuales nos ayudaran a conectarnos con nuestra base de datos, de forma segura sin revelar informacion sensible, gracias al archivo .env, los datos de nuestra api los consumira el frontend el cual se encuentra en la carpeta "client" desarrollado en react.
 
-2.
+npm run start
+2. frontend react, despliega un interfaz sencilla y practica la cual permite al usuario, editar, eliminar, actualizar y despliegar los datos de cada empleado, se consume el ami por medio de fetch, se utilizo la libreria de material ui y algunos estilos css

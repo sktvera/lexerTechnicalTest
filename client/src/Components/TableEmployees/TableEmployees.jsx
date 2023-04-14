@@ -55,11 +55,11 @@ const TableEmployees = () => {
                   color: "black",
                 }}
               >
-                <Typography>Id: {task.id}</Typography>
-                <Typography>Nombre: {task.name}</Typography>
-                <Typography>Primer Apellido: {task.lastname}</Typography>
-                <Typography>Segundo Apellido: {task.secondsurname}</Typography>
-                <Typography>Departamento: {task.department}</Typography>
+                <Typography className='paragraph'><strong>Id: </strong>{task.id}</Typography>
+                <Typography className='paragraph'><strong>Nombre: </strong>{task.name}</Typography>
+                <Typography className='paragraph'><strong>Primer Apellido: </strong>{task.lastname}</Typography>
+                <Typography className='paragraph'><strong>Segundo Apellido: </strong>{task.secondsurname}</Typography>
+                <Typography className='paragraph'><strong>Departamento: </strong>{task.department}</Typography>
               </div>
               <div>
                 <Button

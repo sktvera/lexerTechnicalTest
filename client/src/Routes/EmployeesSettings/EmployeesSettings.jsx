@@ -79,7 +79,7 @@ const EmployeesSettings = () => {
             padding: "1rem",
           }}
         >
-          <Typography variant="h5" textAlign="center" color="black">
+          <Typography className="paragraphts" variant="h5" textAlign="center" color="black">
             {editing ? "Actualizar Empleado" : "Empleado Registrado"}
           </Typography>
           <CardContent>

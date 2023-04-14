@@ -1,3 +1,8 @@
 .EmployeesSettings{
     height: 100vh;
 }
+
+.paragraphts{
+    font-family: 'Dosis', sans-serif !important;
+    font-weight: 700 !important;
+}
