@@ -3,6 +3,9 @@ const cors = require("cors");
 const morgan = require("morgan");
 const router = require("./routes/tasks.routes");
 
+/*
+*--------------- START THE SERVER = NPM RUN DEV --------- 
+*/
 const app = express();
 
 // Settings
