@@ -1,6 +1,6 @@
 .containedHomeLexer{
 
-    height: 500px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +16,7 @@
     transition: 2s;
     cursor: pointer;
     margin: 10px;
+    
 }
 .gridsCardHome{
     

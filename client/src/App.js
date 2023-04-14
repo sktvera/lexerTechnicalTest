@@ -5,18 +5,10 @@ import Welcome from './Routes/Welcome/Welcome';
 import HomeLexer from './Routes/HomeLexer/HomeLexer';
 import Employees from './Routes/Employees/Employees';
 import EmployeesSettings from './Routes/EmployeesSettings/EmployeesSettings';
-import EmployeesEdit from './Routes/EmployeesEdit/EmployeesEdit';
-import EmployeesUpdate from './Routes/EmployeesUpdate/EmployeesUpdate';
-/* import Nurse from './Routes/Nurse/Nurse'; */
+import EmployeesNew from './Routes/EmployeesNew/EmployeesNew';
 import Footer from './Components/Footer/Footer';
 
-
 import "./app.css"
-
-
-
-
-
 
 const App = () => {
   return (
@@ -27,11 +19,8 @@ const App = () => {
           <Route exact path='/' element={<Welcome />}/>
           <Route path='/homeLexer' element={<HomeLexer />}/>
           <Route path='/Employees' element={<Employees/>}/>
-          <Route path='/EmployeesSettings' element={<EmployeesSettings/>}/>
-          <Route path='/EmployeesEdit' element={<EmployeesEdit/>}/>
-          <Route path='/EmployeesUpdate' element={<EmployeesUpdate/>}/>
-         {/*  <Route path='/doctor/:id' element={<Doctor />} /> */}
-         
+          <Route path="/EmployeesSettings/:id/edit" element={<EmployeesSettings />} />
+          <Route path="/EmployeesNew/new" element={<EmployeesNew />} />
         </Routes>
         <Footer />
       </div>

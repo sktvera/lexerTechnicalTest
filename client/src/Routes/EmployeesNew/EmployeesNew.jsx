@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import {Button,Card,CardContent,Grid,TextField,Typography,CircularProgress,} from "@mui/material";
+import {Button, Card, CardContent, Grid, TextField, Typography, CircularProgress} from "@mui/material";
+
 import "./Assets/styles.css"
 
-const EmployeesSettings = () => {
+const EmployeesNew = () => {
   const [task, setTask] = useState({
     name: "",
     lastname: "",
@@ -25,7 +26,7 @@ const EmployeesSettings = () => {
   const loadTask = async (id) => {
     const res = await fetch("http://localhost:4000/tasks/" + id);
     const data = await res.json();
-    setTask({ name: data.name, lastname: data.lastname,secondsurname: data.secondsurname, department: data.department });
+    setTask({ name: data.name, lastname: data.lastname,  secondsurname: data.secondsurname, department: data.department });
     setEditing(true);
   };
 
@@ -63,7 +64,7 @@ const EmployeesSettings = () => {
     setTask({ ...task, [e.target.name]: e.target.value });
 
   return (
-    <div className="EmployeesSettings">
+   <div className="ContainedEmployeesNew">
 
 <Grid
       container
@@ -71,7 +72,7 @@ const EmployeesSettings = () => {
       direction="column"
       justifyContent="center"
     >
-      <Grid  item xs={3}>
+      <Grid item xs={3}>
         <Card
           sx={{ mt: 5 }}
           style={{
@@ -80,7 +81,7 @@ const EmployeesSettings = () => {
           }}
         >
           <Typography variant="h5" textAlign="center" color="black">
-            {editing ? "Actualizar Empleado" : "Empleado Registrado"}
+            {editing ? "Empleado Actualizado" : "Crear Empleado"}
           </Typography>
           <CardContent>
             <form onSubmit={handleSubmit}>
@@ -97,7 +98,7 @@ const EmployeesSettings = () => {
                 inputProps={{ style: { color: "black" } }}
                 InputLabelProps={{ style: { color: "black" } }}
               />
-             <TextField
+              <TextField
                 variant="filled"
                 label="Escribe Tu Primer Apellido"
                 sx={{
@@ -110,7 +111,7 @@ const EmployeesSettings = () => {
                 inputProps={{ style: { color: "black" } }}
                 InputLabelProps={{ style: { color: "black" } }}
               />
-              <TextField
+               <TextField
                 variant="filled"
                 label="Escribe Tu Segundo Apellido"
                 sx={{
@@ -123,7 +124,7 @@ const EmployeesSettings = () => {
                 inputProps={{ style: { color: "black" } }}
                 InputLabelProps={{ style: { color: "black" } }}
               />
-              <TextField
+               <TextField
                 variant="filled"
                 label="Escribe Un Departamento"
                 sx={{
@@ -146,7 +147,7 @@ const EmployeesSettings = () => {
                 {loading ? (
                   <CircularProgress color="inherit" size={25} />
                 ) : (
-                  "Actualizar"
+                  "Guardar"
                 )}
               </Button>
             </form>
@@ -155,8 +156,8 @@ const EmployeesSettings = () => {
       </Grid>
     </Grid>
 
-    </div>
+   </div>
   );
 };
 
-export default EmployeesSettings;
+export default EmployeesNew;

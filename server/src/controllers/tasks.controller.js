@@ -9,11 +9,13 @@ const pool = require("../db");
 /* CREATE NEW OBJECT METHOD HTTP POST */
 const createTask = async (req, res, next) => {
      try {
-            const { title, description } = req.body;
-            const newTask = await pool.query("INSERT INTO task (title, description) VALUES($1, $2) RETURNING *",
+            const { name, lastname, secondsurname, department  } = req.body;
+            const newTask = await pool.query("INSERT INTO task (name, lastname, secondsurname, department) VALUES($1, $2, $3, $4) RETURNING *",
              [
-               title,
-                description
+              name,
+              lastname,
+              secondsurname,
+              department
               ]
             );
             res.json(newTask.rows[0]);
@@ -22,6 +24,21 @@ const createTask = async (req, res, next) => {
                next(error);
           }
 };
+
+/*
+*
+*
+ Example: POST http://localhost:4000/tasks
+
+{
+  "name": "juanso",
+  "lastname": "florezs",
+  "secondsurname": "persez",
+  "department": "antisoquia"
+} 
+*
+*
+*/
 
 /* SHOW ALL OBJECTS METHOD HTTP GET */
 const getAllTasks = async (req, res, next) => {
@@ -57,12 +74,15 @@ const getTask = async (req, res) => {
 const updateTask = async (req, res) => {
   try {
         const { id } = req.params;
-        const { title, description } = req.body;
-        const result = await pool.query("UPDATE task SET title = $1, description = $2 WHERE id = $3 RETURNING *",
+        const { name, lastname, secondsurname, department } = req.body;
+        const result = await pool.query("UPDATE task SET name = $1, lastname = $2, secondsurname = $3,department = $4 WHERE id = $5 RETURNING *",
           [
-            title,
-            description,
+            name,
+            lastname,
+            secondsurname,
+            department,
             id
+
           ]
         );
 
