@@ -1,22 +1,42 @@
-import TaskForm from "./components/TaskForm";
-import TasksList from "./components/TasksList";
-import Menu from "./components/Navbar";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Container } from "@mui/material";
+import React from 'react'
+import { Routes, Route } from "react-router-dom";
+import Navbar from './Components/Navbar/Navbar';
+import Welcome from './Routes/Welcome/Welcome';
+import HomeLexer from './Routes/HomeLexer/HomeLexer';
+import Employees from './Routes/Employees/Employees';
+import EmployeesSettings from './Routes/EmployeesSettings/EmployeesSettings';
+import EmployeesEdit from './Routes/EmployeesEdit/EmployeesEdit';
+import EmployeesUpdate from './Routes/EmployeesUpdate/EmployeesUpdate';
+/* import Nurse from './Routes/Nurse/Nurse'; */
+import Footer from './Components/Footer/Footer';
 
-function App() {
+
+import "./app.css"
+
+
+
+
+
+
+const App = () => {
   return (
-    <BrowserRouter>
-      <Menu />
-      <Container>
-        <Routes>
-          <Route index path="/" element={<TasksList />} />
-          <Route path="/tasks/new" element={<TaskForm />} />
-          <Route path="/tasks/:id/edit" element={<TaskForm />} />
-        </Routes>
-      </Container>
-    </BrowserRouter>
-  );
-}
 
-export default App;
+      <div className='app'>
+        <Navbar />
+        <Routes>
+          <Route exact path='/' element={<Welcome />}/>
+          <Route path='/homeLexer' element={<HomeLexer />}/>
+          <Route path='/Employees' element={<Employees/>}/>
+          <Route path='/EmployeesSettings' element={<EmployeesSettings/>}/>
+          <Route path='/EmployeesEdit' element={<EmployeesEdit/>}/>
+          <Route path='/EmployeesUpdate' element={<EmployeesUpdate/>}/>
+         {/*  <Route path='/doctor/:id' element={<Doctor />} /> */}
+         
+        </Routes>
+        <Footer />
+      </div>
+ 
+  )
+} 
+
+export default App

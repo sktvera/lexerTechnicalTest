@@ -1,0 +1,23 @@
+.containedForm{
+   
+    display: grid !important;
+    grid-template-columns: 35% 62% !important;
+}
+.containedTableEmployees{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boderTable{
+    border: 2px solid  #EDEDED;
+    border-radius: 8px;
+}
+
+.itemIcons{
+    display: grid;
+grid-template-columns: 50% 50%;}
+.itemIcons div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

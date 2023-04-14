@@ -1,0 +1,22 @@
+.containedWelcome{
+    display: grid;
+    grid-template-rows: 70% 30%;
+}
+.buttonWelcome{
+    width: 150px;
+}
+
+button{ 
+    color: black !important; 
+    background-color: #EDEDED !important;
+}
+
+.contained-buttonWelcome{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navlinks{
+    text-decoration: none;
+}
+

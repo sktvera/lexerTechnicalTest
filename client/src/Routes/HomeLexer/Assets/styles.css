@@ -1,0 +1,36 @@
+.containedHomeLexer{
+
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containedHomeLexer-body{
+    transition: 2s;
+    border: 1px solid  #EDEDED;
+    border-radius: 8px;
+    width: 300px;
+    height: 350px;
+}
+.containedHomeLexer :hover{
+    transition: 2s;
+    cursor: pointer;
+    margin: 10px;
+}
+.gridsCardHome{
+    
+    height: 100%;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+.itemTittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+
+ul {
+    list-style: none;
+}

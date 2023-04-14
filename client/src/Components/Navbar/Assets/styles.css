@@ -1,0 +1,15 @@
+
+  .nav_logo {
+    width: 20%;
+    z-index: 2;
+    margin-left: 30px;
+  }
+  .nav_logo {
+    width: 16%;
+  }
+  .logo {
+    max-width: 140px;
+  }
+  .bodyNavbar{
+    background-color:#EDEDED;
+}
